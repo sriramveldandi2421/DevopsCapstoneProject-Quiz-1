@@ -22,7 +22,7 @@ resource "aws_security_group" "allow_all" {
 }
 
 resource "aws_instance" "main-instance" {
-  ami             = "ami-0f9de6e2d2f067fca"  # Ubuntu 22.04 LTS AMI (Update as needed)
+  ami             = "ami-0f9de6e2d2f067fca"
   instance_type   = "t2.medium"
   key_name        = "project"
   security_groups = [aws_security_group.allow_all.name]
@@ -33,7 +33,7 @@ resource "aws_instance" "main-instance" {
 }
 
 resource "aws_instance" "slave-instance" {
-  ami             = "ami-0f9de6e2d2f067fca"  # Ubuntu 22.04 LTS AMI (Update as needed)
+  ami             = "ami-0f9de6e2d2f067fca"
   instance_type   = "t2.micro"
   key_name        = "project"
   security_groups = [aws_security_group.allow_all.name]
