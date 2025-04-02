@@ -1,4 +1,4 @@
 FROM nginx:latest
 COPY . /usr/share/nginx/html
-EXPOSE 85
+EXPOSE 80
 CMD ["nginx", "-g", "daemon off;"]
