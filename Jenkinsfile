@@ -9,9 +9,9 @@ pipeline {
         stage('Removing Docker image and container') {
             steps {
                 script {
-                    sh 'docker rmi -f sriram2421/html-app:latest'
                     sh 'docker stop html-app-container'
                     sh 'docker rm html-app-container'
+                    sh 'docker rmi -f sriram2421/html-app:latest'
                 }
             }
         }
